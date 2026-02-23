@@ -1,10 +1,22 @@
 # Community Call Skill
 
-Three workflows — tell the agent which one you want:
+Four workflows — tell the agent which one you want:
 
 - **"create upcoming"** — right after a call: roll the banner to the next call + create past call card
 - **"update agenda"** — ~1 week before: add agenda to the upcoming banner
-- **"add recap"** — ~7 days after a call: add recap URL + banner image to the past call card
+- **"add image"** — when banner image is ready: add it to the past call card
+- **"add recap"** — ~7 days after a call: add recap URL to the past call card
+
+## Branch workflow
+- **"create upcoming"** and **"update agenda"** → work on the `staging` branch
+- After the call, merge `staging` → `main`
+- **"add image"** and **"add recap"** → work on `main` (post-call)
+
+Before starting any pre-call workflow, ensure you are on the `staging` branch:
+```
+git checkout staging && git pull
+```
+After making changes on staging, commit and push to `staging` (not `main`).
 
 ---
 
