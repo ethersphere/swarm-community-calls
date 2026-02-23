@@ -62,7 +62,7 @@ Triggered when: the next call date is known (typically right after the previous 
 ```
 
 4. **Create a new `.ics` file** at `calendar/swarm-community-call-[month]-[year].ics`:
-   - Use the event datetime: new call date at 17:00 CET (16:00 UTC), duration 2 hours
+   - Use the event datetime: new call date at 17:00 CET (16:00 UTC), duration 1 hour (DTEND = DTSTART + 1h)
    - Include the agenda in the description if known, otherwise use generic text
    - Follow the same format as existing `.ics` files in `calendar/`
 
