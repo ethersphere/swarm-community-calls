@@ -75,7 +75,8 @@ Triggered when: the next call date is known (typically right after the previous 
 
 4. **Create a new `.ics` file** at `calendar/swarm-community-call-[month]-[year].ics`:
    - Use the event datetime: new call date at 17:00 CET (16:00 UTC), duration 1 hour (DTEND = DTSTART + 1h)
-   - Include the agenda in the description if known, otherwise use generic text
+   - Description format: `Join the Swarm Community Call on [DD Month] at 17:00 CET\, broadcast on X: [X_BROADCAST_URL]\n\nCommunity AMA & open space for debate – Ask a question: https://airtable.com/appNS3aNAw7rihPeg/shrBRyrMkXFsJvLS3`
+   - Note: commas in `.ics` DESCRIPTION must be escaped as `\,`
    - Follow the same format as existing `.ics` files in `calendar/`
 
 5. **Update the upcoming banner** in `index.html`:
