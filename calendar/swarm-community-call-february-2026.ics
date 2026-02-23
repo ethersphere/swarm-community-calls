@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Swarm Foundation//Community Calls//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART:20260226T160000Z
+DTEND:20260226T180000Z
+SUMMARY:Swarm Community Call — February 2026
+DESCRIPTION:Monthly Swarm Community Call — live on X.\n\nAgenda:\n• Core Development Updates — Bee 2.7 release & what's coming next\n• In Focus: New Developer Guides — Clear paths for builders\n• Community Talk: File Manager — Familiar file workflows in the Desktop App\n• Community Talk: Identity Management — Portable identities across devices\n• Community AMA & Open Space\n\nJoin: https://x.com/i/broadcasts/1mrGmByzOLkJy
+URL:https://x.com/i/broadcasts/1mrGmByzOLkJy
+LOCATION:https://x.com/i/broadcasts/1mrGmByzOLkJy
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR
