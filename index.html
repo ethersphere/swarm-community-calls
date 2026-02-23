@@ -67,9 +67,21 @@
           </div>
           <a href="https://x.com/i/broadcasts/1mrGmByzOLkJy" class="call-featured-cta" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:14px;height:14px;margin-right:8px;flex-shrink:0"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            Join on X &rarr;
+            Watch on X &rarr;
           </a>
-          <a href="calendar/swarm-community-call-february-2026.ics" class="call-featured-secondary" download>Add to Calendar</a>
+          <div class="cal-picker" id="cal-picker">
+            <button class="cal-picker-btn" id="cal-picker-btn" aria-expanded="false" aria-haspopup="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:14px;height:14px;margin-right:8px;flex-shrink:0"><path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zM7 12h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
+              Add to Calendar &#9662;
+            </button>
+            <div class="cal-picker-dropdown" id="cal-picker-dropdown" hidden>
+              <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Swarm+Community+Call+%E2%80%94+February+2026&dates=20260226T160000Z%2F20260226T180000Z&details=Monthly+Swarm+Community+Call%2C+live+on+X.+Join%3A+https%3A%2F%2Fx.com%2Fi%2Fbroadcasts%2F1mrGmByzOLkJy&location=https%3A%2F%2Fx.com%2Fi%2Fbroadcasts%2F1mrGmByzOLkJy" class="cal-picker-option" target="_blank" rel="noopener">Google Calendar</a>
+              <a href="https://outlook.live.com/calendar/0/deeplink/compose?subject=Swarm+Community+Call+%E2%80%94+February+2026&startdt=2026-02-26T16%3A00%3A00Z&enddt=2026-02-26T18%3A00%3A00Z&body=Monthly+Swarm+Community+Call%2C+live+on+X.+Join%3A+https%3A%2F%2Fx.com%2Fi%2Fbroadcasts%2F1mrGmByzOLkJy&location=https%3A%2F%2Fx.com%2Fi%2Fbroadcasts%2F1mrGmByzOLkJy" class="cal-picker-option" target="_blank" rel="noopener">Outlook.com</a>
+              <a href="https://outlook.office.com/calendar/0/deeplink/compose?subject=Swarm+Community+Call+%E2%80%94+February+2026&startdt=2026-02-26T16%3A00%3A00Z&enddt=2026-02-26T18%3A00%3A00Z&body=Monthly+Swarm+Community+Call%2C+live+on+X.+Join%3A+https%3A%2F%2Fx.com%2Fi%2Fbroadcasts%2F1mrGmByzOLkJy&location=https%3A%2F%2Fx.com%2Fi%2Fbroadcasts%2F1mrGmByzOLkJy" class="cal-picker-option" target="_blank" rel="noopener">Office 365</a>
+              <a href="https://calendar.yahoo.com/?v=60&title=Swarm+Community+Call+%E2%80%94+February+2026&st=20260226T160000Z&et=20260226T180000Z&desc=Monthly+Swarm+Community+Call%2C+live+on+X.+Join%3A+https%3A%2F%2Fx.com%2Fi%2Fbroadcasts%2F1mrGmByzOLkJy&in_loc=https%3A%2F%2Fx.com%2Fi%2Fbroadcasts%2F1mrGmByzOLkJy" class="cal-picker-option" target="_blank" rel="noopener">Yahoo Calendar</a>
+              <a href="calendar/swarm-community-call-february-2026.ics" class="cal-picker-option" download>Apple / iCal (.ics)</a>
+            </div>
+          </div>
           <a href="https://airtable.com/appNS3aNAw7rihPeg/shrBRyrMkXFsJvLS3" class="call-featured-secondary" target="_blank" rel="noopener">Community AMA &amp; open space &mdash; Ask a question</a>
         </div>
       </div>
@@ -640,6 +652,29 @@
 
     update();
     setInterval(update, 1000);
+  })();
+
+  // Calendar picker
+  (function () {
+    var btn      = document.getElementById('cal-picker-btn');
+    var dropdown = document.getElementById('cal-picker-dropdown');
+    if (!btn || !dropdown) return;
+
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = !dropdown.hidden;
+      dropdown.hidden = open;
+      btn.setAttribute('aria-expanded', !open);
+    });
+
+    document.addEventListener('click', function () {
+      dropdown.hidden = true;
+      btn.setAttribute('aria-expanded', 'false');
+    });
+
+    dropdown.addEventListener('click', function (e) {
+      e.stopPropagation();
+    });
   })();
 </script>
 </body>
