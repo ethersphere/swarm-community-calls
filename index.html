@@ -32,7 +32,7 @@
         <div class="call-featured-body">
           <span class="call-featured-badge">Upcoming</span>
           <p class="call-featured-date">February 26, 2026 &middot; 17:00 CET</p>
-          <h2 class="call-featured-title">Swarm Community Call</h2>
+          <h2 class="call-featured-title">Swarm Community Call &mdash; February</h2>
           <p class="call-featured-subtitle">This month&rsquo;s agenda:</p>
           <ul class="call-featured-agenda">
             <li><strong>Core Development Updates</strong> &mdash; Bee 2.7 release &amp; what&rsquo;s coming next</li>
@@ -41,6 +41,25 @@
             <li><strong>Community Talk: Identity Management</strong> &mdash; Portable identities across devices and gateways</li>
             <li><strong>Community AMA &amp; Open Space</strong> &mdash; Ask your questions live</li>
           </ul>
+          <div class="call-featured-countdown-wrap" id="call-countdown-wrap">
+            <p class="countdown-starts-in" id="cd-starts-label">Starts in</p>
+            <div class="call-featured-countdown" id="call-countdown">
+              <div class="countdown-block" id="cd-days">
+                <span class="countdown-number" id="cd-days-val">00</span>
+                <span class="countdown-label">Days</span>
+              </div>
+              <div class="countdown-divider" id="cd-div-days"></div>
+              <div class="countdown-block">
+                <span class="countdown-number" id="cd-hours-val">00</span>
+                <span class="countdown-label">Hours</span>
+              </div>
+              <div class="countdown-divider"></div>
+              <div class="countdown-block">
+                <span class="countdown-number" id="cd-mins-val">00</span>
+                <span class="countdown-label">Minutes</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="call-featured-actions">
           <div class="call-featured-img-wrap">
@@ -572,5 +591,56 @@
     </div>
   </footer>
 
+<script>
+  (function () {
+    // February 26, 2026 17:00 CET (UTC+1)
+    var eventTime = new Date('2026-02-26T16:00:00Z');
+    var eventEnd  = new Date(eventTime.getTime() + 2 * 60 * 60 * 1000);
+
+    var outerWrap   = document.getElementById('call-countdown-wrap');
+    var wrap        = document.getElementById('call-countdown');
+    var startsLabel = document.getElementById('cd-starts-label');
+    var daysBlock   = document.getElementById('cd-days');
+    var daysDivider = document.getElementById('cd-div-days');
+    var daysVal     = document.getElementById('cd-days-val');
+    var hoursVal    = document.getElementById('cd-hours-val');
+    var minsVal     = document.getElementById('cd-mins-val');
+    if (!wrap) return;
+
+    function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+    function update() {
+      var now  = new Date();
+      var diff = eventTime - now;
+
+      if (now >= eventEnd) {
+        outerWrap.style.display = 'none';
+        return;
+      }
+      if (diff <= 0) {
+        startsLabel.style.display = 'none';
+        wrap.innerHTML = '<span class="countdown-live">🔴 Live now</span>';
+        return;
+      }
+
+      var totalSecs = Math.floor(diff / 1000);
+      var days  = Math.floor(totalSecs / 86400);
+      var hours = Math.floor((totalSecs % 86400) / 3600);
+      var mins  = Math.floor((totalSecs % 3600) / 60);
+
+      // Hide DAYS block when under 24h
+      var showDays = days > 0;
+      daysBlock.style.display   = showDays ? '' : 'none';
+      daysDivider.style.display = showDays ? '' : 'none';
+
+      daysVal.textContent  = pad(days);
+      hoursVal.textContent = pad(hours);
+      minsVal.textContent  = pad(mins);
+    }
+
+    update();
+    setInterval(update, 1000);
+  })();
+</script>
 </body>
 </html>
