@@ -7,6 +7,20 @@
   <meta name="description" content="Monthly community calls from Swarm Foundation. Development updates, ecosystem news, and live Q&A — every last Thursday of the month.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="assets/Mark_Orange.png">
+  <!-- Matomo -->
+  <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://mtm.swarm.foundation/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '21']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
 </head>
 <body>
 
@@ -709,6 +723,15 @@
 
     dropdown.addEventListener('click', function (e) {
       e.stopPropagation();
+    });
+
+    // Matomo: track calendar option clicks
+    var options = dropdown.querySelectorAll('.cal-picker-option');
+    options.forEach(function (link) {
+      link.addEventListener('click', function () {
+        var label = link.textContent.trim();
+        _paq.push(['trackEvent', 'Calendar', 'Add to Calendar', label]);
+      });
     });
   })();
 </script>
