@@ -7,6 +7,20 @@
   <meta name="description" content="Monthly community calls from Swarm Foundation. Development updates, ecosystem news, and live Q&A — every last Thursday of the month.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="assets/Mark_Orange.png">
+  <!-- Matomo -->
+  <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://mtm.swarm.foundation/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '21']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
 </head>
 <body>
 
@@ -35,9 +49,9 @@
           <h2 class="call-featured-title">Swarm Community Call &mdash; March</h2>
           <p class="call-featured-subtitle">This month&rsquo;s agenda:</p>
           <ul class="call-featured-agenda">
-            <li><strong>Core Development Updates</strong></li>
-            <li><strong>In Focus:</strong> TBD</li>
-            <li><strong>Community Talk:</strong> TBD</li>
+            <li><strong>Core Development Updates</strong> with Ljubi&scaron;a Ga&ccaron;evi&cacute;</li>
+            <li><strong>In Focus: Protocol Reshaping</strong> with Andrew Macpherson</li>
+            <li><strong>Community Talk: The Mobile Node</strong> with Nandor Komlodi</li>
             <li><strong>Community AMA &amp; Open Space</strong> &mdash; <a href="https://airtable.com/appNS3aNAw7rihPeg/shrBRyrMkXFsJvLS3" target="_blank" rel="noopener" style="color:var(--color-orange)">Ask a question</a></li>
           </ul>
           <div class="call-featured-countdown-wrap" id="call-countdown-wrap">
@@ -61,22 +75,29 @@
           </div>
         </div>
         <div class="call-featured-actions">
-          <a href="https://x.com/i/broadcasts/1dxYljlkMwyJX" class="call-featured-img-wrap" target="_blank" rel="noopener">
+          <div class="call-featured-img-wrap">
             <img src="assets/SCC-march-2026.png" alt="March 26 Community Call" class="call-featured-img">
-            <div class="call-video-play">
-              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
-            </div>
-          </a>
+          </div>
+          <div class="call-featured-watch">
+            <a href="https://x.com/i/broadcasts/1dxYljlkMwyJX" class="call-link" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:16px;height:16px;flex-shrink:0"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              Watch on X &rarr;
+            </a>
+            <a href="https://youtube.com/live/bRkYQfXbawA" class="call-link" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:16px;height:16px;flex-shrink:0"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              Watch on YouTube &rarr;
+            </a>
+          </div>
           <div class="cal-picker" id="cal-picker">
             <button class="cal-picker-btn" id="cal-picker-btn" aria-expanded="false" aria-haspopup="true">
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:14px;height:14px;margin-right:8px;flex-shrink:0"><path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zM7 12h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
               Add to Calendar &#9662;
             </button>
             <div class="cal-picker-dropdown" id="cal-picker-dropdown" hidden>
-              <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Swarm+Community+Call+%E2%80%94+March+2026&dates=20260326T160000Z%2F20260326T170000Z&details=Monthly+Swarm+Community+Call%2C+live+on+X.+Join%3A+https%3A%2F%2Fx.com%2Fi%2Fbroadcasts%2F1dxYljlkMwyJX&location=https%3A%2F%2Fx.com%2Fi%2Fbroadcasts%2F1dxYljlkMwyJX" class="cal-picker-option" target="_blank" rel="noopener">Google Calendar</a>
-              <a href="https://outlook.live.com/calendar/0/deeplink/compose?subject=Swarm+Community+Call+%E2%80%94+March+2026&startdt=2026-03-26T16%3A00%3A00Z&enddt=2026-03-26T17%3A00%3A00Z&body=Monthly+Swarm+Community+Call%2C+live+on+X.+Join%3A+https%3A%2F%2Fx.com%2Fi%2Fbroadcasts%2F1dxYljlkMwyJX&location=https%3A%2F%2Fx.com%2Fi%2Fbroadcasts%2F1dxYljlkMwyJX" class="cal-picker-option" target="_blank" rel="noopener">Outlook.com</a>
-              <a href="https://outlook.office.com/calendar/0/deeplink/compose?subject=Swarm+Community+Call+%E2%80%94+March+2026&startdt=2026-03-26T16%3A00%3A00Z&enddt=2026-03-26T17%3A00%3A00Z&body=Monthly+Swarm+Community+Call%2C+live+on+X.+Join%3A+https%3A%2F%2Fx.com%2Fi%2Fbroadcasts%2F1dxYljlkMwyJX&location=https%3A%2F%2Fx.com%2Fi%2Fbroadcasts%2F1dxYljlkMwyJX" class="cal-picker-option" target="_blank" rel="noopener">Office 365</a>
-              <a href="https://calendar.yahoo.com/?v=60&title=Swarm+Community+Call+%E2%80%94+March+2026&st=20260326T160000Z&et=20260326T170000Z&desc=Monthly+Swarm+Community+Call%2C+live+on+X.+Join%3A+https%3A%2F%2Fx.com%2Fi%2Fbroadcasts%2F1dxYljlkMwyJX&in_loc=https%3A%2F%2Fx.com%2Fi%2Fbroadcasts%2F1dxYljlkMwyJX" class="cal-picker-option" target="_blank" rel="noopener">Yahoo Calendar</a>
+              <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Swarm+Community+Call+%E2%80%94+March+2026&dates=20260326T160000Z%2F20260326T170000Z&details=Monthly+community+call+for+development+updates%2C+ecosystem+news%2C+and+live+Q%26A.%0A%0AStreaming+live+on+X+and+YouTube%3A%0A%E2%96%B8+X%3A+https%3A%2F%2Fx.com%2Fi%2Fbroadcasts%2F1dxYljlkMwyJX%0A%E2%96%B8+YouTube%3A+https%3A%2F%2Fyoutube.com%2Flive%2FbRkYQfXbawA%0A%0AAsk+a+question%3A+https%3A%2F%2Fairtable.com%2FappNS3aNAw7rihPeg%2FshrBRyrMkXFsJvLS3&location=https%3A%2F%2Fyoutube.com%2Flive%2FbRkYQfXbawA" class="cal-picker-option" target="_blank" rel="noopener">Google Calendar</a>
+              <a href="https://outlook.live.com/calendar/0/deeplink/compose?subject=Swarm+Community+Call+%E2%80%94+March+2026&startdt=2026-03-26T16%3A00%3A00Z&enddt=2026-03-26T17%3A00%3A00Z&body=Monthly+community+call+for+development+updates%2C+ecosystem+news%2C+and+live+Q%26A.%0A%0AStreaming+live+on+X+and+YouTube%3A%0A%E2%96%B8+X%3A+https%3A%2F%2Fx.com%2Fi%2Fbroadcasts%2F1dxYljlkMwyJX%0A%E2%96%B8+YouTube%3A+https%3A%2F%2Fyoutube.com%2Flive%2FbRkYQfXbawA%0A%0AAsk+a+question%3A+https%3A%2F%2Fairtable.com%2FappNS3aNAw7rihPeg%2FshrBRyrMkXFsJvLS3&location=https%3A%2F%2Fyoutube.com%2Flive%2FbRkYQfXbawA" class="cal-picker-option" target="_blank" rel="noopener">Outlook.com</a>
+              <a href="https://outlook.office.com/calendar/0/deeplink/compose?subject=Swarm+Community+Call+%E2%80%94+March+2026&startdt=2026-03-26T16%3A00%3A00Z&enddt=2026-03-26T17%3A00%3A00Z&body=Monthly+community+call+for+development+updates%2C+ecosystem+news%2C+and+live+Q%26A.%0A%0AStreaming+live+on+X+and+YouTube%3A%0A%E2%96%B8+X%3A+https%3A%2F%2Fx.com%2Fi%2Fbroadcasts%2F1dxYljlkMwyJX%0A%E2%96%B8+YouTube%3A+https%3A%2F%2Fyoutube.com%2Flive%2FbRkYQfXbawA%0A%0AAsk+a+question%3A+https%3A%2F%2Fairtable.com%2FappNS3aNAw7rihPeg%2FshrBRyrMkXFsJvLS3&location=https%3A%2F%2Fyoutube.com%2Flive%2FbRkYQfXbawA" class="cal-picker-option" target="_blank" rel="noopener">Office 365</a>
+              <a href="https://calendar.yahoo.com/?v=60&title=Swarm+Community+Call+%E2%80%94+March+2026&st=20260326T160000Z&et=20260326T170000Z&desc=Monthly+community+call+for+development+updates%2C+ecosystem+news%2C+and+live+Q%26A.%0A%0AStreaming+live+on+X+and+YouTube%3A%0A%E2%96%B8+X%3A+https%3A%2F%2Fx.com%2Fi%2Fbroadcasts%2F1dxYljlkMwyJX%0A%E2%96%B8+YouTube%3A+https%3A%2F%2Fyoutube.com%2Flive%2FbRkYQfXbawA%0A%0AAsk+a+question%3A+https%3A%2F%2Fairtable.com%2FappNS3aNAw7rihPeg%2FshrBRyrMkXFsJvLS3&in_loc=https%3A%2F%2Fyoutube.com%2Flive%2FbRkYQfXbawA" class="cal-picker-option" target="_blank" rel="noopener">Yahoo Calendar</a>
               <a href="calendar/swarm-community-call-march-2026.ics" class="cal-picker-option" download>Apple / iCal (.ics)</a>
             </div>
           </div>
@@ -709,6 +730,15 @@
 
     dropdown.addEventListener('click', function (e) {
       e.stopPropagation();
+    });
+
+    // Matomo: track calendar option clicks
+    var options = dropdown.querySelectorAll('.cal-picker-option');
+    options.forEach(function (link) {
+      link.addEventListener('click', function () {
+        var label = link.textContent.trim();
+        _paq.push(['trackEvent', 'Calendar', 'Add to Calendar', label]);
+      });
     });
   })();
 </script>

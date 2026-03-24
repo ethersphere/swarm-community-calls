@@ -329,8 +329,22 @@ img {
   transform: scale(1.04);
 }
 
-.call-featured-img-wrap:hover .call-video-play {
-  background: var(--color-orange);
+.call-featured-watch {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.call-featured-watch .call-link {
+  border: 1.5px solid var(--color-orange);
+  border-radius: 6px;
+  padding: 8px 14px;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.call-featured-watch .call-link:hover {
+  background: rgba(255, 128, 0, 0.1);
+  opacity: 1;
 }
 
 .call-featured-cta {
