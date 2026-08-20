@@ -331,9 +331,15 @@ img {
 
 .call-featured-watch {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 12px;
   margin-top: 8px;
+}
+
+.call-featured-watch-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .call-featured-watch .call-link {
