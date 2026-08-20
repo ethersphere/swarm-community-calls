@@ -397,6 +397,11 @@ img {
   text-align: center;
 }
 
+.call-featured-body .cal-picker {
+  max-width: 320px;
+  margin-top: 20px;
+}
+
 .cal-picker-btn {
   display: inline-flex;
   align-items: center;
