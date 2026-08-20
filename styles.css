@@ -342,6 +342,11 @@ img {
   gap: 12px;
 }
 
+.call-featured-watch-row--full .call-link {
+  width: 100%;
+  justify-content: center;
+}
+
 .call-featured-watch .call-link {
   border: 1.5px solid var(--color-orange);
   border-radius: 6px;
