@@ -403,22 +403,24 @@ img {
   justify-content: center;
   width: 100%;
   background: transparent;
-  border: 1px solid var(--color-orange);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 12px 24px;
   font-family: var(--font-family);
   font-size: 0.875rem;
   font-weight: 700;
-  color: var(--color-orange) !important;
+  color: var(--color-text-secondary) !important;
   text-decoration: none !important;
   text-underline-offset: unset;
   cursor: pointer;
   white-space: nowrap;
-  transition: background 0.2s, opacity 0.2s;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, opacity 0.2s;
 }
 
 .cal-picker-btn:hover {
-  background: rgba(255, 122, 0, 0.08);
+  background: var(--color-bg-card-hover);
+  border-color: var(--color-text-secondary);
+  color: var(--color-text) !important;
   opacity: 1;
 }
 
