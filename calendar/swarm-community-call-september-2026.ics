@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Swarm Foundation//Community Calls//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART:20260924T150000Z
+DTEND:20260924T160000Z
+SUMMARY:Swarm Community Call — September 2026
+DESCRIPTION:Monthly community call for development updates\, ecosystem news\, and live Q&A.\n\nStreaming live on Swarm\, X and YouTube:\n▸ Swarm: https://streamoverswarm.eth.limo/#/watch/video/6F2728386F8a47ef5EBe323721188e630Ff0FdE9/ea5032e8-2ce4-4160-85f4-6e45312ee3e8\n▸ X: https://x.com/i/broadcasts/1jxXgBmlAWPJZ\n▸ YouTube: https://youtube.com/live/3OpzvIzgBno\n\nAsk a question: https://airtable.com/appNS3aNAw7rihPeg/shrBRyrMkXFsJvLS3
+URL:https://youtube.com/live/3OpzvIzgBno
+LOCATION:https://youtube.com/live/3OpzvIzgBno
+STATUS:CONFIRMED
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR
